@@ -1,0 +1,124 @@
+:root{
+  --green-dark:#4a6741;
+  --green:#7c9473;
+  --green-light:#c9d8bd;
+  --cream:#f7f1e1;
+  --cream-2:#fbf7ec;
+  --brown:#6b4a35;
+  --danger:#b5533c;
+  --radius:16px;
+  --shadow:0 4px 14px rgba(74,103,65,.12);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:'Quicksand',sans-serif;
+  background:var(--cream);
+  color:var(--brown);
+  min-height:100vh;
+  background-image:radial-gradient(circle at 10% 10%, var(--cream-2) 0, transparent 60%);
+}
+.script{font-family:'Dancing Script',cursive;color:var(--green-dark);font-size:1.15em}
+.bg-decor{position:fixed;inset:0;pointer-events:none;opacity:.05;font-size:40px;display:flex;justify-content:space-around;padding-top:20px}
+
+.site-header{
+  text-align:center;
+  padding:28px 16px 18px;
+  border-bottom:3px dashed var(--green-light);
+  background:var(--cream-2);
+}
+.header-inner h1{margin:6px 0 0;font-size:2.4rem;color:var(--green-dark)}
+.balloon-icon{font-size:1.8rem}
+.subtitle{margin:4px 0;color:var(--brown);font-weight:600}
+.event-info{margin:6px 0 0;font-size:.95rem;color:var(--green-dark)}
+
+.auth-section{display:flex;justify-content:center;padding:18px}
+.user-info{display:flex;align-items:center;gap:10px;background:#fff;padding:6px 14px;border-radius:30px;box-shadow:var(--shadow)}
+.user-info img{width:32px;height:32px;border-radius:50%}
+.user-info span{font-weight:600}
+
+.btn{
+  border:none;border-radius:30px;padding:10px 20px;font-family:inherit;font-weight:600;
+  cursor:pointer;font-size:.95rem;transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--green);color:#fff;box-shadow:var(--shadow)}
+.btn-primary:hover{background:var(--green-dark)}
+.btn-ghost{background:transparent;color:var(--brown);border:1.5px solid var(--green-light)}
+.btn-danger{background:transparent;color:var(--danger);border:1.5px solid var(--danger)}
+.btn-small{padding:6px 14px;font-size:.85rem}
+
+.tabs{display:flex;justify-content:center;gap:10px;padding:0 16px 10px}
+.tab-btn{
+  background:transparent;border:2px solid var(--green-light);color:var(--green-dark);
+  padding:8px 18px;border-radius:30px;font-weight:700;cursor:pointer;font-family:inherit;
+}
+.tab-btn.active{background:var(--green);color:#fff;border-color:var(--green)}
+
+main{max-width:1000px;margin:0 auto;padding:10px 18px 60px}
+.tab-panel{display:none}
+.tab-panel.active{display:block}
+.hint{text-align:center;color:var(--green-dark);font-weight:600;margin:16px 0}
+.empty-msg{text-align:center;color:var(--brown);opacity:.7;padding:40px}
+
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.product-card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;
+  display:flex;flex-direction:column;border:1px solid var(--green-light);
+}
+.product-img{width:100%;height:150px;object-fit:cover;background:var(--cream-2)}
+.product-img.placeholder{display:flex;align-items:center;justify-content:center;font-size:2.6rem}
+.product-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.product-body h3{margin:0;color:var(--green-dark);font-size:1.1rem}
+.product-body p{margin:0;font-size:.88rem;color:var(--brown);opacity:.85}
+.product-link{font-size:.82rem;color:var(--green-dark);text-decoration:underline}
+.progress-wrap{background:var(--cream-2);border-radius:10px;height:10px;overflow:hidden;margin-top:4px}
+.progress-bar{height:100%;background:var(--green)}
+.progress-label{font-size:.78rem;color:var(--green-dark);font-weight:600}
+.contributors{font-size:.78rem;color:var(--brown);opacity:.85}
+.status-pill{align-self:flex-start;background:var(--green-light);color:var(--green-dark);font-size:.75rem;font-weight:700;padding:2px 10px;border-radius:20px}
+.status-pill.taken{background:#e7ddc7;color:var(--brown)}
+.status-pill.mine{background:var(--green);color:#fff}
+.product-footer{padding:12px 14px;border-top:1px dashed var(--green-light)}
+
+.admin-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;border:1px solid var(--green-light);margin-bottom:26px}
+.admin-card h2{margin-top:0;color:var(--green-dark)}
+#product-form{display:flex;flex-direction:column;gap:12px}
+#product-form label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:.9rem;color:var(--brown)}
+#product-form input,#product-form textarea{
+  border:1.5px solid var(--green-light);border-radius:10px;padding:8px 10px;font-family:inherit;font-size:.95rem;
+}
+.checkbox-row{flex-direction:row !important;align-items:center;gap:8px !important}
+.checkbox-row input{width:auto}
+.form-actions{display:flex;gap:10px;margin-top:4px}
+.section-title{color:var(--green-dark)}
+.admin-products-list{display:flex;flex-direction:column;gap:12px}
+.admin-product-row{
+  background:#fff;border:1px solid var(--green-light);border-radius:12px;padding:12px 16px;
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;box-shadow:var(--shadow)
+}
+.admin-product-row .info h4{margin:0 0 4px;color:var(--green-dark)}
+.admin-product-row .info p{margin:0;font-size:.82rem;opacity:.8}
+.claim-list{font-size:.8rem;margin-top:6px;color:var(--brown)}
+.admin-row-actions{display:flex;gap:8px}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal-box{background:#fff;border-radius:var(--radius);padding:24px;max-width:400px;width:100%;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.modal-close{position:absolute;top:10px;right:14px;background:none;border:none;font-size:1.1rem;cursor:pointer;color:var(--brown)}
+.modal-box h3{margin-top:0;color:var(--green-dark)}
+.modal-remaining{font-size:.88rem;color:var(--green-dark);font-weight:600}
+.field-row label{display:flex;flex-direction:column;gap:4px;font-weight:600;font-size:.9rem}
+.field-row input{border:1.5px solid var(--green-light);border-radius:10px;padding:8px 10px;width:100%}
+.modal-note{font-size:.78rem;opacity:.7;margin:8px 0 14px}
+
+.toast{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--green-dark);color:#fff;
+  padding:10px 20px;border-radius:30px;font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.2);z-index:100;
+}
+
+.site-footer{text-align:center;padding:20px;color:var(--green-dark);opacity:.7;font-size:.85rem}
+
+@media (max-width:480px){
+  .header-inner h1{font-size:1.9rem}
+  .products-grid{grid-template-columns:1fr}
+}
